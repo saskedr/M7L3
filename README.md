@@ -27,5 +27,3 @@ pytest
 ## Автор
 yernur1
 
-Kodland
-...---...
