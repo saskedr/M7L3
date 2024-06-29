@@ -1,5 +1,6 @@
 import string
 from password.new_password import generate_password
+from password.new_password import password_length
 
 def test_password_characters():
     """Тест, что при генерации используются только допустимые символы"""
@@ -15,3 +16,9 @@ def test_password_characters():
 Тест, что длина пароля соответствует заданной
 Тест, что два сгенерированных подряд пароля различаются
 """
+
+def test_password_length():
+    """Тест, что длина пароля соответствует заданной"""
+    length = password_length
+    password = generate_password(length)
+    assert len(password) == length
