@@ -1,7 +1,7 @@
 import random
 import string
 
-def generate_password(length=12):
+def generate_password(length=int):
     try:
         """Генерация случайного пароля заданной длины."""
         characters = string.ascii_letters + string.digits + string.punctuation
@@ -10,8 +10,8 @@ def generate_password(length=12):
             password += random.choice(characters)
         return password
     except TypeError:
-        return "error"
+        return "Введите число"
 
 # Пример использования
-password_length = 12  # Вы можете выбрать любую длину пароля
+password_length = -12  # Вы можете выбрать любую длину пароля
 print("Ваш новый пароль:", generate_password(password_length))

@@ -9,10 +9,14 @@ def test_password_characters():
         assert char in valid_characters
 def test_error():
     password = generate_password('s')
-    assert password == "error"
+    assert password == "Введите число"
 def test_passw():
     password = generate_password(10)
     assert password == password
+def test_otric():
+    password = generate_password(-10)
+    assert password == ""
+
 
 """
 Допиши еще один тест из предложенных. Или придумай свой.
