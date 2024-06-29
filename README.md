@@ -25,5 +25,6 @@ pytest
 ```
 
 ## Автор
-yernur
+yernur1
+
 Kodland
