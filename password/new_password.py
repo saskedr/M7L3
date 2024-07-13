@@ -13,5 +13,5 @@ def generate_password(length=int):
         return "Введите число"
 
 # Пример использования
-password_length = -12  # Вы можете выбрать любую длину пароля
+password_length = 120  # Вы можете выбрать любую длину пароля
 print("Ваш новый пароль:", generate_password(password_length))

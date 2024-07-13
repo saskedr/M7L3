@@ -16,6 +16,13 @@ def test_passw():
 def test_otric():
     password = generate_password(-10)
     assert password == ""
+def test_generate_password_generates_unique_passwords():
+    passwords = [generate_password(10) for _ in range(100)]
+    assert len(set(passwords)) == len(passwords)
+def test_generate_password_with_valid_length():
+    password = generate_password(10)
+    assert len(password) == 10
+    assert isinstance(password, str)
 
 
 """
